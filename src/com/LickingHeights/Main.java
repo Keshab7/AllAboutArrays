@@ -1,22 +1,25 @@
 package com.LickingHeights;
 
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
+
 public class Main {
 
     public static void main(String[] args) {
         // write your code here
-//        int size = 10;
-//        int lowestNumber = 0;
-//        int highestNumber = 10;
-//
-//
-//        int[] array = createNumberArray(size, lowestNumber, highestNumber);
-//
+        int size = 10;
+        int lowestNumber = 80;
+        int highestNumber = 90;
+
+
+        int[] array = createNumberArray(size, lowestNumber, highestNumber);
+
 //
 //        Pattern1();
 //        Pattern2();
 //        Pattern3();
 //        Pattern4();
-        Pattern5();
+//        Pattern5();
+        System.out.println("The sum of the array is " +sum(array));
     }
 
     public static int[] createNumberArray(int size, int lowestNumber, int highestNumber) {
@@ -87,6 +90,15 @@ public class Main {
             }
             System.out.println();
         }
+   }
+
+   public static int sum(int[] array){
+        int sum = 0;
+
+        for(int i = 0; i < array.length; i++){
+            sum += array[i];
+        }
+        return sum;
    }
 
 
