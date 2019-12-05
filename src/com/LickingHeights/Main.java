@@ -72,14 +72,18 @@ public class Main {
         }
     }
     public static void Pattern4(){
-        for(int columns = 1; columns < 7; columns++){
+        for(int rows = 1; rows < 8; rows++){
 
-            for (int rows = 1; rows <= columns; rows++){
+            for (int columns = 1; columns < rows; columns++){
                 System.out.print("*");
             }
             System.out.println();
         }
     }
+//   public static void Pattern5(){
+//        for
+//   }
+
 
 
 
