@@ -14,8 +14,8 @@ public class Main {
 //
 //        Pattern1();
 //        Pattern2();
-        Pattern3();
-//        Pattern4();
+//        Pattern3();
+        Pattern4();
 
     }
 
@@ -71,7 +71,17 @@ public class Main {
             System.out.println();
         }
     }
+    public static void Pattern4(){
+        for(int columns = 1; columns < 7; columns++){
 
-    
+            for (int rows = 1; rows <= columns; rows++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+
+
 }
 
