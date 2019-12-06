@@ -20,7 +20,8 @@ public class Main {
 //        Pattern4();
 //        Pattern5();
 //        System.out.println("The sum of the array is " +sum(array));
-        System.out.println("The min of the array is " +min(array));
+//        System.out.println("The min of the array is " +min(array));
+        System.out.println("The min of the array is " +max(array));
         printArray(array);
 
 
@@ -115,6 +116,18 @@ public class Main {
         }
         return min;
    }
+
+    public static int max(int[] array){
+        int max = array [0];
+
+        for(int i = 0; i < array.length; i++){
+            if (array[i] > max) {
+                max = array[i];
+            }
+        }
+        return max;
+    }
+
 
 
 
