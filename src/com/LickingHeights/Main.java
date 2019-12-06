@@ -19,7 +19,11 @@ public class Main {
 //        Pattern3();
 //        Pattern4();
 //        Pattern5();
-        System.out.println("The sum of the array is " +sum(array));
+//        System.out.println("The sum of the array is " +sum(array));
+        System.out.println("The min of the array is " +min(array));
+        printArray(array);
+
+
     }
 
     public static int[] createNumberArray(int size, int lowestNumber, int highestNumber) {
@@ -99,6 +103,17 @@ public class Main {
             sum += array[i];
         }
         return sum;
+   }
+
+   public static int min(int[] array){
+        int min = array [0];
+
+        for(int i = 0; i < array.length; i++){
+            if (array[i] < min) {
+                min = array[i];
+            }
+        }
+        return min;
    }
 
 
