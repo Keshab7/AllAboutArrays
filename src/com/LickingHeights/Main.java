@@ -21,9 +21,11 @@ public class Main {
 //        Pattern5();
 //        System.out.println("The sum of the array is " +sum(array));
 //        System.out.println("The min of the array is " +min(array));
-        System.out.println("The min of the array is " +max(array));
+//        System.out.println("The min of the array is " +max(array));
         printArray(array);
-
+        System.out.println("After Bubble Sort");
+        System.out.println(bubbleSort(array));
+        printArray(array);
 
     }
 
@@ -60,6 +62,7 @@ public class Main {
         }
 
     }
+
     public static void Pattern2() {
         for (int rows = 1; rows < 7; rows++) {
 
@@ -70,6 +73,7 @@ public class Main {
             System.out.println();
         }
     }
+
     public static void Pattern3() {
         for (int rows = 1; rows < 7; rows++) {
 
@@ -79,48 +83,50 @@ public class Main {
             System.out.println();
         }
     }
-    public static void Pattern4(){
-        for(int rows = 1; rows < 8; rows++){
 
-            for (int columns = 1; columns < rows; columns++){
+    public static void Pattern4() {
+        for (int rows = 1; rows < 8; rows++) {
+
+            for (int columns = 1; columns < rows; columns++) {
                 System.out.print("*");
             }
             System.out.println();
         }
     }
-   public static void Pattern5(){
-        for(int rows = 1; rows < 8; rows++){
-            for(int columns = 1; columns <rows; columns++){
+
+    public static void Pattern5() {
+        for (int rows = 1; rows < 8; rows++) {
+            for (int columns = 1; columns < rows; columns++) {
                 System.out.print(columns);
             }
             System.out.println();
         }
-   }
+    }
 
-   public static int sum(int[] array){
+    public static int sum(int[] array) {
         int sum = 0;
 
-        for(int i = 0; i < array.length; i++){
+        for (int i = 0; i < array.length; i++) {
             sum += array[i];
         }
         return sum;
-   }
+    }
 
-   public static int min(int[] array){
-        int min = array [0];
+    public static int min(int[] array) {
+        int min = array[0];
 
-        for(int i = 0; i < array.length; i++){
+        for (int i = 0; i < array.length; i++) {
             if (array[i] < min) {
                 min = array[i];
             }
         }
         return min;
-   }
+    }
 
-    public static int max(int[] array){
-        int max = array [0];
+    public static int max(int[] array) {
+        int max = array[0];
 
-        for(int i = 0; i < array.length; i++){
+        for (int i = 0; i < array.length; i++) {
             if (array[i] > max) {
                 max = array[i];
             }
@@ -128,9 +134,20 @@ public class Main {
         return max;
     }
 
+    public static int[] bubbleSort(int[] array) {
+        int n = array.length;
+        for (int i = 0; i < n - 1; i++) {
 
+                for (int j = 0; n-1-i>j; j++ ){
+                    if (array[j] > array [j+1]){
+                        int temp = array[j];
+                        array [j] = array [j+1];
+                        array [j+1] = temp;
+                    }
+                }
 
-
-
+        }
+    return array;
+    }
 }
 
