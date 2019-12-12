@@ -10,7 +10,6 @@ public class Main {
         int lowestNumber = 80;
         int highestNumber = 90;
 
-
         int[] array = createNumberArray(size, lowestNumber, highestNumber);
 
 //
@@ -22,10 +21,16 @@ public class Main {
 //        System.out.println("The sum of the array is " +sum(array));
 //        System.out.println("The min of the array is " +min(array));
 //        System.out.println("The min of the array is " +max(array));
-        printArray(array);
-        System.out.println("After Bubble Sort");
-        System.out.println(bubbleSort(array));
-        printArray(array);
+//        printArray(array);
+//        System.out.println("After Bubble Sort");
+//        printArray(bubbleSort(array));
+        String[] adjectivs = {"Boring, Lame, Kind, Cool"};
+        String[] places = {"Mount Everest, Great Wall of China, Columbus, Kitchen"};
+        String[] people = {"Peter Griffin, Cristiano Ronaldo, Iron Man, Captain America"};
+        String[] verbs = {"Hear, Drink, Laugh, Run" };
+        String[] times = {"11:30am, 7pm, 3am, Noon"};
+        String[] things = {"Monkeys, Pizza, Italy, Chairs"};
+
 
     }
 
@@ -149,5 +154,8 @@ public class Main {
         }
     return array;
     }
+
+
+
 }
 
