@@ -26,16 +26,22 @@ public class Main {
 //        printArray(array);
 //        System.out.println("After Bubble Sort");
 //        printArray(bubbleSort(array));
-        String[] adjectivs = {"Boring", "Lame", "Kind", "Cool"};
-        String[] places = {"Mount Everest", "Great Wall of China", "Columbus", "Kitchen"};
-        String[] people = {"Peter Griffin", "Cristiano Ronaldo", "Iron Man", "Captain America"};
-        String[] verbs = {"Listening", "Drinking", "Laughing", "Running" };
-        String[] times = {"11:30am", "7pm", "3am", "Noon"};
-        String[] things = {"Monkeys", "Pizza", "Italy", "Chair"};
-System.out.println("I was"+" "+sentenceGenerator(verbs) + " down the " + sentenceGenerator(places)
-        + " around " + sentenceGenerator(times) + " with my best friend " + sentenceGenerator(people)
-        + " and we " +sentenceGenerator(verbs) + " a " + sentenceGenerator(adjectivs) + " "  + sentenceGenerator(things)
-        + " that was " + sentenceGenerator(verbs) + " " + sentenceGenerator(things) + "s");
+//        String[] adjectivs = {"Boring", "Lame", "Kind", "Cool"};
+//        String[] places = {"Mount Everest", "Great Wall of China", "Columbus", "Kitchen"};
+//        String[] people = {"Peter Griffin", "Cristiano Ronaldo", "Iron Man", "Captain America"};
+//        String[] verbs = {"Listening", "Drinking", "Laughing", "Running" };
+//        String[] times = {"11:30am", "7pm", "3am", "Noon"};
+//        String[] things = {"Monkeys", "Pizza", "Italy", "Chair"};
+        String[] firstName = {"Moe", "Billy", "Gabe", "Ben"};
+        String[] middleName = {"Liz", "Robert", "Flair", "Charles" };
+        String[] lastName = {"Lester", "Vincent", "Cox", "Tiddliwinks"};
+
+//System.out.println("I was"+" "+randomWord(verbs) + " down the " + randomWord(places)
+//        + " around " + randomWord(times) + " with my best friend " + randomWord(people)
+//        + " and we " +randomWord(verbs) + " a " + randomWord(adjectivs) + " "  + randomWord(things)
+//        + " that was " + randomWord(verbs) + " " + randomWord(things) + "s");
+        
+System.out.println(randomWord(firstName) + " " + randomWord(middleName)+ " " + randomWord(lastName));
 
     }
 
@@ -160,11 +166,6 @@ System.out.println("I was"+" "+sentenceGenerator(verbs) + " down the " + sentenc
         return array;
     }
 
-    public static String sentenceGenerator(String[] array) {
-        Random random = new Random();
-
-        return array[random.nextInt(array.length)];
-    }
 
     public static String randomWord(String[] array) {
         Random random = new Random();
@@ -172,7 +173,9 @@ System.out.println("I was"+" "+sentenceGenerator(verbs) + " down the " + sentenc
         return array[random.nextInt(array.length)];
     }
 
+public static void print80sRapperName(String [] array) {
 
+}
 
 }
 
