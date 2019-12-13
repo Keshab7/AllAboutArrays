@@ -2,6 +2,8 @@ package com.LickingHeights;
 
 import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
+import java.util.Random;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -24,13 +26,16 @@ public class Main {
 //        printArray(array);
 //        System.out.println("After Bubble Sort");
 //        printArray(bubbleSort(array));
-        String[] adjectivs = {"Boring, Lame, Kind, Cool"};
-        String[] places = {"Mount Everest, Great Wall of China, Columbus, Kitchen"};
-        String[] people = {"Peter Griffin, Cristiano Ronaldo, Iron Man, Captain America"};
-        String[] verbs = {"Hear, Drink, Laugh, Run" };
-        String[] times = {"11:30am, 7pm, 3am, Noon"};
-        String[] things = {"Monkeys, Pizza, Italy, Chairs"};
-
+        String[] adjectivs = {"Boring", "Lame", "Kind", "Cool"};
+        String[] places = {"Mount Everest", "Great Wall of China", "Columbus", "Kitchen"};
+        String[] people = {"Peter Griffin", "Cristiano Ronaldo", "Iron Man", "Captain America"};
+        String[] verbs = {"Listening", "Drinking", "Laughing", "Running" };
+        String[] times = {"11:30am", "7pm", "3am", "Noon"};
+        String[] things = {"Monkeys", "Pizza", "Italy", "Chair"};
+System.out.println("I was"+" "+sentenceGenerator(verbs) + " down the " + sentenceGenerator(places)
+        + " around " + sentenceGenerator(times) + " with my best friend " + sentenceGenerator(people)
+        + " and we " +sentenceGenerator(verbs) + " a " + sentenceGenerator(adjectivs) + " "  + sentenceGenerator(things)
+        + " that was " + sentenceGenerator(verbs) + " " + sentenceGenerator(things) + "s");
 
     }
 
@@ -143,16 +148,28 @@ public class Main {
         int n = array.length;
         for (int i = 0; i < n - 1; i++) {
 
-                for (int j = 0; n-1-i>j; j++ ){
-                    if (array[j] > array [j+1]){
-                        int temp = array[j];
-                        array [j] = array [j+1];
-                        array [j+1] = temp;
-                    }
+            for (int j = 0; n - 1 - i > j; j++) {
+                if (array[j] > array[j + 1]) {
+                    int temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
                 }
+            }
 
         }
-    return array;
+        return array;
+    }
+
+    public static String sentenceGenerator(String[] array) {
+        Random random = new Random();
+
+        return array[random.nextInt(array.length)];
+    }
+
+    public static String randomWord(String[] array) {
+        Random random = new Random();
+
+        return array[random.nextInt(array.length)];
     }
 
 
